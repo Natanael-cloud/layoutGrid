@@ -1,5 +1,6 @@
 **Bom Dia/Boa Tarde/Boa Noite Dev's**
 
+
 # 🧩 Layout com CSS Grid Responsivo
 
 Este projeto é uma demonstração prática de como criar um layout **moderno, semântico e responsivo** utilizando o **CSS Grid Layout** e conceitos básicos de **design responsivo**.
@@ -29,3 +30,5 @@ A estrutura original do grid é mantida mesmo em dispositivos móveis, com ajust
 - O segundo grid se **empilha verticalmente** para melhor leitura no mobile.
 
 
+<br><br>
+**Acesse o projeto através do Link:** https://natanael-cloud.github.io/layoutGrid/
