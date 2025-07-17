@@ -1,0 +1,92 @@
+/* Container principal usando grid com 3 colunas fixas e 2 linhas */
+.container {
+    background: greenyellow;         /* Cor de fundo do grid */
+    padding: 12px;                   /* Espaço interno */
+    margin-bottom: 18px;             /* Distância inferior para separar os blocos */
+
+    display: grid;                   /* Ativa grid layout */
+    grid-template-columns: 1fr 2fr 2fr;  /* 3 colunas: a 1ª menor, as outras maiores */
+    grid-template-rows: 333px 222px;    /* 2 linhas com altura fixa */
+    gap: 10px 20px;                  /* Espaçamento: 10px (linhas), 20px (colunas) */
+}
+
+/* Estilo base para todos os itens do primeiro grid */
+.item {
+    border: 2px solid black;         /* Borda preta ao redor dos itens */
+    padding: 10px;                   /* Espaço interno */
+    text-align: center;              /* Centraliza texto e conteúdo */
+}
+
+/* Cores individuais de fundo para visualização didática */
+.item-01 { background: blueviolet; }
+.item-02 { background: lightcyan; }
+.item-03 { background: lightpink; }
+.item-04 { background: lightgoldenrodyellow; }
+.item-05 { background: red; }
+.item-06 { background: peru; }
+
+/* Todas as imagens dentro dos itens terão o mesmo estilo */
+.item img {
+    width: 100px;        /* Largura padrão */
+    height: auto;        /* Altura proporcional */
+    display: block;      /* Garante quebra de linha */
+    margin: 10px auto;   /* Centraliza horizontalmente e dá espaço vertical */
+    border-radius: 8px;  /* Bordas levemente arredondadas */
+}
+
+/* Segundo grid com 2 colunas e 3 linhas fixas */
+.container-02 {
+    border: 2px solid purple;               /* Borda ao redor do grid */
+    display: grid;                          /* Ativa grid layout */
+    grid-template-columns: repeat(2, 1fr);  /* 2 colunas iguais */
+    grid-template-rows: repeat(3, 100px);   /* 3 linhas com 100px de altura */
+    gap: 7px;                               /* Espaço entre os itens */
+}
+
+/* Estilo base dos itens do segundo grid */
+.itemA {
+    background-color: deepskyblue;  /* Cor de fundo azul */
+    text-align: center;             /* Centraliza texto */
+    padding: 8px;
+
+    display: flex;                  /* Usa Flexbox para alinhar o conteúdo */
+    flex-direction: column;        /* Alinha verticalmente */
+    align-items: center;           /* Centraliza horizontalmente */
+    justify-content: center;       /* Centraliza verticalmente */
+}
+
+/* Destaque para um item específico do grid */
+.selected {
+    background-color: deeppink;  /* Cor diferenciada */
+    grid-column: 2 / 3;          /* Posiciona na 2ª coluna */
+    grid-row: 2 / 3;             /* Posiciona na 2ª linha */
+}
+
+/* Quadrado verde decorativo */
+.itemA .quadrado {
+    background-color: green;   /* Cor do quadrado */
+    width: 50px;               /* Tamanho fixo */
+    height: 50px;
+    margin-bottom: 5px;        /* Espaço inferior */
+}
+
+/* Estilo das imagens no segundo grid */
+.itemA img {
+    width: 50px;        /* Tamanho fixo para ícones */
+    height: auto;
+    margin-bottom: 5px;
+}
+
+/* Responsividade mínima para telas pequenas */
+@media (max-width: 600px) {
+    .container {
+        overflow-x: auto; /* Permite rolagem horizontal em telas pequenas */
+    }
+
+    .container-02 {
+        grid-template-columns: 1fr;     /* Transforma em 1 coluna no mobile */
+        grid-auto-rows: auto;           /* Altura automática dos blocos */
+    }
+}
+
+
